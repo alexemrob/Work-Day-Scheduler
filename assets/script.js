@@ -30,9 +30,49 @@ saveBtn1.addEventListener('click', updateOutput1);
 function updateOutput1() {
     localStorage.setItem('content1', inputText1.value);
 };
+saveBtn2.addEventListener('click', updateOutput2);
+function updateOutput2() {
+    localStorage.setItem('content2', inputText2.value);
+};
+saveBtn3.addEventListener('click', updateOutput3);
+function updateOutput3() {
+    localStorage.setItem('content3', inputText3.value);
+};
+saveBtn4.addEventListener('click', updateOutput4);
+function updateOutput4() {
+    localStorage.setItem('content4', inputText4.value);
+};
+saveBtn5.addEventListener('click', updateOutput5);
+function updateOutput5() {
+    localStorage.setItem('content5', inputText5.value);
+};
+saveBtn6.addEventListener('click', updateOutput6);
+function updateOutput6() {
+    localStorage.setItem('content6', inputText6.value);
+};
+saveBtn7.addEventListener('click', updateOutput7);
+function updateOutput7() {
+    localStorage.setItem('content7', inputText7.value);
+};
+saveBtn8.addEventListener('click', updateOutput8);
+function updateOutput8() {
+    localStorage.setItem('content8', inputText8.value);
+};
+saveBtn9.addEventListener('click', updateOutput9);
+function updateOutput9() {
+    localStorage.setItem('content9', inputText9.value);
+};
 
 //shows previously saved text on scheduler if page is refreshed
 inputText1.value = localStorage.getItem('content1');
+inputText1.value = localStorage.getItem('content2');
+inputText1.value = localStorage.getItem('content3');
+inputText1.value = localStorage.getItem('content4');
+inputText1.value = localStorage.getItem('content5');
+inputText1.value = localStorage.getItem('content6');
+inputText1.value = localStorage.getItem('content7');
+inputText1.value = localStorage.getItem('content8');
+inputText1.value = localStorage.getItem('content9');
 
 //statements to change hourly color display depending on time of day
 var now= new Date().getHours();
