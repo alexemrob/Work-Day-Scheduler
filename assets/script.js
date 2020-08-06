@@ -1,16 +1,3 @@
-//provides current date & time
-$(document).ready(function () {
-    var dateParagraph = $("#currentDay");
-    var todayDate = moment().format('LLLL');
-    dateParagraph.text(todayDate);
-});
-
-//button to clear local storage and refresh the page
-$("#clear").click(function () {
-    localStorage.clear();
-    location.reload()
-});
-
 //create variables from HTML
 var inputText1 = document.querySelector('#plan1');
 var saveBtn1 = document.querySelector('#savePlan1');
@@ -31,3 +18,40 @@ var saveBtn8 = document.querySelector('#savePlan8');
 var inputText9 = document.querySelector('#plan9');
 var saveBtn9 = document.querySelector('#savePlan9');
 
+//provides current date & time
+$(document).ready(function () {
+    var dateParagraph = $("#currentDay");
+    var todayDate = moment().format('LLLL');
+    dateParagraph.text(todayDate);
+});
+
+//function to save input text to local storage when save button is clicked
+saveBtn1.addEventListener('click', updateOutput1);
+function updateOutput1() {
+    localStorage.setItem('content1', inputText1.value);
+};
+
+//shows previously saved text on scheduler if page is refreshed
+inputText1.value = localStorage.getItem('content1');
+
+//statements to change hourly color display depending on time of day
+var now= new Date().getHours();
+
+if (now > 9) {
+    $("#plan1").addClass("past");
+	}	
+    else if (now >= 9 && now < 10) {
+        $("#plan1").addClass("present");
+	}
+    else if (now < 9) {
+        $("#plan1").addClass("future");
+	}
+
+
+
+//keep this @ end of script
+//button to clear local storage and refresh the page
+$("#clear").click(function () {
+    localStorage.clear();
+    location.reload()
+});
