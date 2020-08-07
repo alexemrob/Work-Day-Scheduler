@@ -21,7 +21,7 @@ var saveBtn9 = document.querySelector('#savePlan9');
 //provides current date & time
 $(document).ready(function () {
     var dateParagraph = $("#currentDay");
-    var todayDate = moment().format('LLLL');
+    var todayDate = moment().format('dddd, MMMM Do YYYY');
     dateParagraph.text(todayDate);
 });
 
@@ -65,32 +65,109 @@ function updateOutput9() {
 
 //shows previously saved text on scheduler if page is refreshed
 inputText1.value = localStorage.getItem('content1');
-inputText1.value = localStorage.getItem('content2');
-inputText1.value = localStorage.getItem('content3');
-inputText1.value = localStorage.getItem('content4');
-inputText1.value = localStorage.getItem('content5');
-inputText1.value = localStorage.getItem('content6');
-inputText1.value = localStorage.getItem('content7');
-inputText1.value = localStorage.getItem('content8');
-inputText1.value = localStorage.getItem('content9');
+inputText2.value = localStorage.getItem('content2');
+inputText3.value = localStorage.getItem('content3');
+inputText4.value = localStorage.getItem('content4');
+inputText5.value = localStorage.getItem('content5');
+inputText6.value = localStorage.getItem('content6');
+inputText7.value = localStorage.getItem('content7');
+inputText8.value = localStorage.getItem('content8');
+inputText9.value = localStorage.getItem('content9');
 
 //statements to change hourly color display depending on time of day
-var now= new Date().getHours();
+var now = new Date().getHours();
 
 if (now > 9) {
     $("#plan1").addClass("past");
-	}	
-    else if (now >= 9 && now < 10) {
-        $("#plan1").addClass("present");
-	}
-    else if (now < 9) {
-        $("#plan1").addClass("future");
-	}
+}
+else if (now >= 9 && now < 10) {
+    $("#plan1").addClass("present");
+}
+else if (now < 9) {
+    $("#plan1").addClass("future");
+}
 
+if (now > 10) {
+    $("#plan2").addClass("past");
+}
+else if (now >= 10 && now < 10) {
+    $("#plan2").addClass("present");
+}
+else if (now < 10) {
+    $("#plan2").addClass("future");
+}
 
+if (now > 11) {
+    $("#plan3").addClass("past");
+}
+else if (now >= 11 && now < 11) {
+    $("#plan3").addClass("present");
+}
+else if (now < 11) {
+    $("#plan3").addClass("future");
+}
 
-//keep this @ end of script
-//button to clear local storage and refresh the page
+if (now > 12) {
+    $("#plan4").addClass("past");
+}
+else if (now >= 12 && now < 12) {
+    $("#plan4").addClass("present");
+}
+else if (now < 12) {
+    $("#plan4").addClass("future");
+}
+
+if (now > 13) {
+    $("#plan5").addClass("past");
+}
+else if (now >= 13 && now < 13) {
+    $("#plan5").addClass("present");
+}
+else if (now < 13) {
+    $("#plan5").addClass("future");
+}
+
+if (now > 14) {
+    $("#plan6").addClass("past");
+}
+else if (now >= 14 && now < 14) {
+    $("#plan6").addClass("present");
+}
+else if (now < 14) {
+    $("#plan6").addClass("future");
+}
+
+if (now > 15) {
+    $("#plan7").addClass("past");
+}
+else if (now >= 15 && now < 15) {
+    $("#plan7").addClass("present");
+}
+else if (now < 15) {
+    $("#plan7").addClass("future");
+}
+
+if (now > 16) {
+    $("#plan8").addClass("past");
+}
+else if (now >= 16 && now < 16) {
+    $("#plan8").addClass("present");
+}
+else if (now < 16) {
+    $("#plan8").addClass("future");
+}
+
+if (now > 17) {
+    $("#plan9").addClass("past");
+}
+else if (now >= 17 && now < 17) {
+    $("#plan9").addClass("present");
+}
+else if (now < 17) {
+    $("#plan9").addClass("future");
+}
+
+//button to clear all input text previously saved in local storage
 $("#clear").click(function () {
     localStorage.clear();
     location.reload()
