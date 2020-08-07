@@ -3,6 +3,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
+    text-align: center;
   }
   
   textarea{
@@ -12,6 +13,8 @@ body {
     color: #000000;
     border-left: 1px solid black;
     padding: 10px;
+    width: 600px;
+    text-align: center;
   }
   
   .jumbotron {
@@ -20,6 +23,7 @@ body {
     color: black;
     border-radius: 0;
     border-bottom: 10px solid black;
+    font-family: cursive;
   }
   
   .description{
@@ -34,7 +38,8 @@ body {
   .row {
     white-space: pre-wrap;
     height: 80px;
-    border-top: 1px solid white;;
+    border-top: 1px solid white;
+    margin-left: 200px;
   }
   
   .hour {
@@ -69,4 +74,9 @@ body {
   .saveBtn i:hover {
     font-size: 20px;
     transition: all .3s ease-in-out;
+  }
+
+  #clear {
+    font-size: 20px;
+    font-family: cursive;
   }
