@@ -21,7 +21,7 @@ var saveBtn9 = document.querySelector('#savePlan9');
 //provides current date & time
 $(document).ready(function () {
     var dateParagraph = $("#currentDay");
-    var todayDate = moment().format('dddd, MMMM Do YYYY');
+    var todayDate = moment().format(' dddd, MMMM Do YYYY');
     dateParagraph.text(todayDate);
 });
 
@@ -80,7 +80,7 @@ var now = new Date().getHours();
 if (now > 9) {
     $("#plan1").addClass("past");
 }
-else if (now >= 9 && now < 10) {
+else if (now >= 9) {
     $("#plan1").addClass("present");
 }
 else if (now < 9) {
@@ -90,7 +90,7 @@ else if (now < 9) {
 if (now > 10) {
     $("#plan2").addClass("past");
 }
-else if (now >= 10 && now < 10) {
+else if (now >= 10) {
     $("#plan2").addClass("present");
 }
 else if (now < 10) {
@@ -100,7 +100,7 @@ else if (now < 10) {
 if (now > 11) {
     $("#plan3").addClass("past");
 }
-else if (now >= 11 && now < 11) {
+else if (now >= 11) {
     $("#plan3").addClass("present");
 }
 else if (now < 11) {
@@ -110,7 +110,7 @@ else if (now < 11) {
 if (now > 12) {
     $("#plan4").addClass("past");
 }
-else if (now >= 12 && now < 12) {
+else if (now >= 12) {
     $("#plan4").addClass("present");
 }
 else if (now < 12) {
@@ -120,7 +120,7 @@ else if (now < 12) {
 if (now > 13) {
     $("#plan5").addClass("past");
 }
-else if (now >= 13 && now < 13) {
+else if (now >= 13) {
     $("#plan5").addClass("present");
 }
 else if (now < 13) {
@@ -130,7 +130,7 @@ else if (now < 13) {
 if (now > 14) {
     $("#plan6").addClass("past");
 }
-else if (now >= 14 && now < 14) {
+else if (now >= 14) {
     $("#plan6").addClass("present");
 }
 else if (now < 14) {
@@ -140,7 +140,7 @@ else if (now < 14) {
 if (now > 15) {
     $("#plan7").addClass("past");
 }
-else if (now >= 15 && now < 15) {
+else if (now >= 15) {
     $("#plan7").addClass("present");
 }
 else if (now < 15) {
@@ -150,7 +150,7 @@ else if (now < 15) {
 if (now > 16) {
     $("#plan8").addClass("past");
 }
-else if (now >= 16 && now < 16) {
+else if (now >= 16) {
     $("#plan8").addClass("present");
 }
 else if (now < 16) {
@@ -160,15 +160,9 @@ else if (now < 16) {
 if (now > 17) {
     $("#plan9").addClass("past");
 }
-else if (now >= 17 && now < 17) {
+else if (now >= 17) {
     $("#plan9").addClass("present");
 }
 else if (now < 17) {
     $("#plan9").addClass("future");
 }
-
-//button to clear all input text previously saved in local storage
-$("#clear").click(function () {
-    localStorage.clear();
-    location.reload()
-});
